@@ -35,10 +35,3 @@ for IMAGE in $LIST_IMAGES; do
     # Delete the local image (so that the disk doesn't fill up)
     docker rmi $NAME_REGISTRY/$NAME_IMAGE:$OS_VERSION
 done
-
-# Clean up data
-echo "[INFO] Cleaning ..."
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
-docker rmi $(docker images | grep "^<none>" | awk '{ print $3 }')
-docker rmi $(docker images | grep "<none>" | grep "$NAME_IMAGE" | awk '{ print $3 }')
