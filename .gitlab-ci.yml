@@ -1,0 +1,12 @@
+
+imageBuilder:
+  image: docker:stable
+  services:
+    - docker:dind
+  before_script:
+    - apk add -u bash
+  script:
+    - export DOCKER_HOST=tcp://docker:2375/
+    - docker login ${DOCKER_REGISTRY} --username ${DOCKER_USERNAME} --password ${DOCKER_PASSWORD}
+    - source ./src/data/variables.sh
+    - ./src/cmd/image-builder.sh
