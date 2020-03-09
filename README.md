@@ -2,6 +2,8 @@
 
 A tool to build KubeVirt disk images. Based on [`Tedezed`'s implementation](https://github.com/Tedezed/kubevirt-images-generator).
 
+[![pipeline status](https://gitlab.com/pojntfx/image-builder/badges/master/pipeline.svg)](https://gitlab.com/pojntfx/image-builder/commits/master)
+
 ## Overview
 
 Image Builder can generate KubeVirt disk images from `img`, `iso`, `qcow2`, `tar`, `gz` or `xz` images. GitLab CI/CD has been set up to build and push the following images to Docker Hub [every week](https://gitlab.com/pojntfx/image-builder/pipelines):
