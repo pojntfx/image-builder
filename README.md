@@ -24,6 +24,8 @@ Image Builder can generate KubeVirt disk images from `img`, `iso`, `qcow2`, `tar
 % ./src/cmd/image-builder.sh
 ```
 
+See [this gist](https://gist.github.com/pojntfx/e252c901efa1616b60f1fa00c69f69a1) for how to use the KubeVirt images.
+
 ## License
 
 Image Builder (c) 2020 Felicitas Pojtinger
